@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Problems - Aptitude Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<style>
+    /* Pagination specific styles */
+    .page {
+       display: none;
+   }
+   
+   .page.active {
+       display: block;
+   }
+   
+   /* Active page link styling */
+   .pagination .page-item.active .page-link {
+       background-color: #28a745;
+       border-color: #28a745;
+   }
+   
+   /* Question tracking */
+   .quiz {
+       position: relative;
+       transition: background-color 0.3s ease;
+   }
+   
+   .quiz.answered {
+       border-left: 4px solid #28a745;
+   }
+   
+   /* Progress indicator */
+   .progress-container {
+       margin-bottom: 20px;
+   }
+   
+   .progress {
+       height: 10px;
+       border-radius: 5px;
+       overflow: hidden;
+   }
+   
+   .progress-bar {
+       background-color: #28a745;
+       transition: width 0.5s ease;
+   }</style>
+<body>
+    <!-- Toggle Button -->
+    <button id="sidebarToggle"><i class="fas fa-bars"></i></button>
+    
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Gowthamraj Network</a>
+        </div>
+    </nav>
+
+    <!-- Overlay for mobile -->
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <ul class="list-unstyled">
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-calculator"></i> Arithmetic Aptitude</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Data Interpretation</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> Verbal Ability</a></li>
+            <li><a href="#"><i class="fas fa-brain"></i> Logical Reasoning</a></li>
+            <li><a href="#"><i class="fas fa-code"></i> Programming</a></li>
+            <li><a href="#"><i class="fas fa-newspaper"></i> Current Affairs</a></li>
+            <li><a href="#"><i class="fas fa-user-tie"></i> HR Interview</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Formula Box -->
+        <div class="formula-box">
+            <h3><i class="fas fa-user-friends"></i> Age Problems - Key Formulas</h3>
+            <div class="formula-grid">
+                <div class="formula-item">
+                    <h4>Basic Age Relationships</h4>
+                    <p>If A is x years older than B:</p>
+                    <div class="formula">Age of A = Age of B + x</div>
+                    <p>If A is x times as old as B:</p>
+                    <div class="formula">Age of A = x × Age of B</div>
+                </div>
+                <div class="formula-item">
+                    <h4>Age Ratios</h4>
+                    <p>If ages of A and B are in ratio m:n:</p>
+                    <div class="formula">Age of A / Age of B = m / n</div>
+                    <p>If sum of ages is S:</p>
+                    <div class="formula">Age of A = (m × S) / (m + n)</div>
+                </div>
+                <div class="formula-item">
+                    <h4>Future Ages</h4>
+                    <p>After t years:</p>
+                    <div class="formula">New Age = Current Age + t</div>
+                    <p>New ratio after t years:</p>
+                    <div class="formula">(A + t) : (B + t)</div>
+                </div>
+                <div class="formula-item">
+                    <h4>Past Ages</h4>
+                    <p>t years ago:</p>
+                    <div class="formula">Past Age = Current Age - t</div>
+                    <p>Past ratio t years ago:</p>
+                    <div class="formula">(A - t) : (B - t)</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-success">Age Problems</h2>
+        <p>Practice aptitude questions on age-related problems</p>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="text-end mt-1">
+                <small class="text-muted">Questions answered: <span id="answered-count">0</span>/35</small>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Page 1 (Questions 1-10) -->
+        <div class="page" id="page1" data-page="1">
+            <!-- Question 1 -->
+            <div class="quiz" data-question="1">
+                <h4>Question 1:</h4>
+                <p>B is twice as old as A. C is twice as old as B. If the difference between ages of A and C is 12 years, find the age of B.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 1)">A) 8 years</li>
+                    <li onclick="checkAnswer(this, false, 1)">B) 7 years</li>
+                    <li onclick="checkAnswer(this, false, 1)">C) 6 years</li>
+                    <li onclick="checkAnswer(this, false, 1)">D) 5 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages of A, B and C be x, y and z.<br>
+                    y = 2x, z = 2y<br>
+                    z = 4x<br>
+                    Difference between ages of x and z = 12 years<br>
+                    4x – x = 12 years<br>
+                    3x = 12 years, x = 4 years<br>
+                    y = 2x = 2 * 4 = 8 years
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz" data-question="2">
+                <h4>Question 2:</h4>
+                <p>P is thrice as old as Q. The difference between the ages of P and Q is a multiple of 9. Find the minimum possible age of P, if it is known that Q's age is an odd prime number.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 2)">A) 9 years</li>
+                    <li onclick="checkAnswer(this, false, 2)">B) 10 years</li>
+                    <li onclick="checkAnswer(this, false, 2)">C) 11 years</li>
+                    <li onclick="checkAnswer(this, true, 2)">D) 12 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of P and Q be x and y.<br>
+                    The minimum possible age of Q can be 3 as the age is a prime number and an odd number.<br>
+                    The minimum difference between their ages can be 9 as the number should be a multiple of 9.<br>
+                    P's minimum possible age can be Q's minimum possible age + minimum possible difference.<br>
+                    3 + 9 = 12 years
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz" data-question="3">
+                <h4>Question 3:</h4>
+                <p>The sum of ages of 2 brothers is 45 years. If their ages are in a ratio 4:5, find their ages after 10 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 3)">A) 15, 30 years</li>
+                    <li onclick="checkAnswer(this, false, 3)">B) 20, 25 years</li>
+                    <li onclick="checkAnswer(this, true, 3)">C) 30, 35 years</li>
+                    <li onclick="checkAnswer(this, false, 3)">D) 22, 23 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be x and y, respectively.<br>
+                    x:y = 4:5<br>
+                    x / 4 = y / 5<br>
+                    5x = 4y<br>
+                    x + y = 45<br>
+                    4(x + y) = 45 * 4 (multiplying both sides by 4)<br>
+                    4x + 4y = 180<br>
+                    4x + 5x = 180<br>
+                    9x = 180, x = 20<br>
+                    y = 45 – x = 45 – 20 = 25<br>
+                    x = 20 years, y = 25 years<br>
+                    After 10 years:<br>
+                    x = 20 + 10 = 30 years<br>
+                    y = 25 + 10 = 35 years
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz" data-question="4">
+                <h4>Question 4:</h4>
+                <p>Ram and Raju are cousins. If it is known that Ram is 30 years younger than Raju and the ratio of their ages is 28:7. Find their ages after 5 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 4)">A) 20, 50</li>
+                    <li onclick="checkAnswer(this, false, 4)">B) 30, 60</li>
+                    <li onclick="checkAnswer(this, true, 4)">C) 45, 15</li>
+                    <li onclick="checkAnswer(this, false, 4)">D) 15, 45</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be x and y, respectively.<br>
+                    x:y = 28:7<br>
+                    x / 28 = y / 7<br>
+                    7x = 28y<br>
+                    x = 28y / 7 = 4y<br>
+                    Difference between their ages = 30 years<br>
+                    x – y = 4y – y = 30<br>
+                    3y = 30<br>
+                    y = 10<br>
+                    x = 4y = 10 * 4 = 40 years<br>
+                    After 5 years<br>
+                    x = 40 + 5 = 45 years<br>
+                    y = 10 + 5 = 15 years
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz" data-question="5">
+                <h4>Question 5:</h4>
+                <p>X's age is 20% more than Y's age. If the sum of their ages is 20 more than the difference of their ages, find their respective ages.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 5)">A) 12, 10</li>
+                    <li onclick="checkAnswer(this, false, 5)">B) 18, 15</li>
+                    <li onclick="checkAnswer(this, false, 5)">C) 24, 20</li>
+                    <li onclick="checkAnswer(this, false, 5)">D) 30, 25</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages of X and Y be p and q.<br>
+                    p = q + 20% of q<br>
+                    (p + q) – (p – q) = 20<br>
+                    p + q – p + q = 20<br>
+                    2q = 20<br>
+                    q = 10<br>
+                    Y's age = 10 years<br>
+                    X's age is 20% more than Y's age.<br>
+                    10 + 20% of 10<br>
+                    10 + 10 * 20 / 100<br>
+                    10 + 2 = 12<br>
+                    Their ages are 12, 10.
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="quiz" data-question="6">
+                <h4>Question 6:</h4>
+                <p>Out of 3 friends one is 12 years old. The ratio of the ages of the other 2 friends a and b is 3:4. If the youngest among them is 12 years old, find the minimum possible age of the eldest friend.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 6)">A) 25</li>
+                    <li onclick="checkAnswer(this, false, 6)">B) 30</li>
+                    <li onclick="checkAnswer(this, false, 6)">C) 35</li>
+                    <li onclick="checkAnswer(this, true, 6)">D) 40</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    In the question it is given that first friend is 12 years old also the youngest among them but nowhere it is given that two friends are not of the same age. Thus, in this question it will be assumed that two friends are 12 years old. Of which one is the first mentioned and the other is a.<br>
+                    a is 12 years old.<br>
+                    a:b = 3:4<br>
+                    b = a / 3 * 4, = 12 / 3 * 4 = 16 years<br>
+                    Total of their age = 12 + 12 + 16 = 40
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="quiz" data-question="7">
+                <h4>Question 7:</h4>
+                <p>A branch of a company have 2 employees m and n. If it is known that the ages of m and n are in a ratio 3:12, and the sum of their ages is 7 years and 6 months. Find the age of n.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 7)">A) 5 years</li>
+                    <li onclick="checkAnswer(this, false, 7)">B) 5.5 years</li>
+                    <li onclick="checkAnswer(this, true, 7)">C) 6 years</li>
+                    <li onclick="checkAnswer(this, false, 7)">D) 6.5 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The total of their ages is given in a combination of years and months so the first step will be to convert the total in one unit, here months.<br>
+                    7 years and 6 months = 7 * 12 + 6 = 84 + 6 = 90 months<br>
+                    Ratio of ages of m and n = 3:12<br>
+                    m / 3 = n / 12<br>
+                    12m = 3n<br>
+                    4m = n<br>
+                    m + 4m = 90<br>
+                    5m = 90<br>
+                    m = 18<br>
+                    n = 4m = 4 * 18 = 72<br>
+                    72 months = 72 / 12 = 6 years
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="quiz" data-question="8">
+                <h4>Question 8:</h4>
+                <p>A and B are sisters born after the year 2010. If the sum of their ages will be 19 in the year 2025, What will be the age of A in 2030. It is known that in the year 2024 the ratio of their age is 7:10.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 8)">A) 12</li>
+                    <li onclick="checkAnswer(this, true, 8)">B) 13</li>
+                    <li onclick="checkAnswer(this, false, 8)">C) 14</li>
+                    <li onclick="checkAnswer(this, false, 8)">D) 16</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The sum of their ages in 2025 = 19 years<br>
+                    The sum of their ages in 2024 = (sum in 2025) – 2<br>
+                    19 – 2 = 17<br>
+                    Ratio of ages of a and b in 2024 = 7:10<br>
+                    a / 7 = b / 10<br>
+                    10a = 7b<br>
+                    a + b = 17 years<br>
+                    10 (a + b) = 17 * 10 (multiplying both sides by 10<br>
+                    10a + 10b = 170<br>
+                    7b + 10b = 170<br>
+                    17b = 170<br>
+                    b = 170 / 17 = 10<br>
+                    a = 7b / 10 = 7 * 10 / 10 = 7 years<br>
+                    Age of a in 2024 = 7<br>
+                    Age of a in 2030 = 7 + 6 = 13
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="quiz" data-question="9">
+                <h4>Question 9:</h4>
+                <p>The sum of ages of 2 friends A and B is 42. If the ratio between the sum and difference of their ages is 2:1, find the age of A.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 9)">A) 31.5</li>
+                    <li onclick="checkAnswer(this, false, 9)">B) 32.5</li>
+                    <li onclick="checkAnswer(this, false, 9)">C) 33.5</li>
+                    <li onclick="checkAnswer(this, false, 9)">D) 34.5</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages of A and B be x and y.<br>
+                    (x + y):(x – y) = 2:1<br>
+                    x + y = 2(x – y)<br>
+                    x + y = 2x – 2y<br>
+                    3y = x<br>
+                    x + y = 42 (given)<br>
+                    3y + y = 42<br>
+                    4y = 42<br>
+                    y = 10.5<br>
+                    x = 3y = 3 * 10.5 = 31.5
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="quiz" data-question="10">
+                <h4>Question 10:</h4>
+                <p>If 2 members of a family are in a ratio 3:12, and the average of their ages is 35. Find the total of their ages after 11 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 10)">A) 81 years</li>
+                    <li onclick="checkAnswer(this, true, 10)">B) 92 years</li>
+                    <li onclick="checkAnswer(this, false, 10)">C) 102 years</li>
+                    <li onclick="checkAnswer(this, false, 10)">D) 89 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The average ages of 2 members = 35<br>
+                    The total of their ages = 35 * 2 = 70 years<br>
+                    The ratio of their ages = 3:12 = 1:4 (simplifying)<br>
+                    Let their ages be x and 4x<br>
+                    x + 4x = 70<br>
+                    5x = 70<br>
+                    x = 14, 4x = 56<br>
+                    The total of their ages after 11 years = (14 + 11) + (56 + 11) = 25 + 67 = 92 years.
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2 (Questions 11-20) -->
+        <div class="page" id="page2" data-page="2">
+            <!-- Question 11 -->
+            <div class="quiz" data-question="11">
+                <h4>Question 11:</h4>
+                <p>When my sister was born, I was 1/10th of my father's age. This year my sister voted for the first time and I celebrated my 22nd birthday. Find my father's age when my sister was born.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 11)">A) 34 years</li>
+                    <li onclick="checkAnswer(this, false, 11)">B) 37 years</li>
+                    <li onclick="checkAnswer(this, true, 11)">C) 40 years</li>
+                    <li onclick="checkAnswer(this, false, 11)">D) 42 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    My sister's age now: She voted for the first time that means she turned 18 years old.<br>
+                    My present age = 22 (given)<br>
+                    My age 18 years before = 22 – 18 = 4 years<br>
+                    When my sister was born, I was 1/10th of my father's age that means my father was 10 times of my age.<br>
+                    My father's age when my sister was born = my age * 10 = 4 * 10 = 40 years
+                </div>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="quiz" data-question="12">
+                <h4>Question 12:</h4>
+                <p>When my parents married their age was in a ratio 11 : 10 (father's age : mother's age). This year they celebrated 15th anniversary. If the total of their ages at their silver jubilee anniversary will be 113, find my father's age now.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 12)">A) 33 years</li>
+                    <li onclick="checkAnswer(this, false, 12)">B) 40 years</li>
+                    <li onclick="checkAnswer(this, false, 12)">C) 42 years</li>
+                    <li onclick="checkAnswer(this, true, 12)">D) 48 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The total of my parent's age at their silver jubilee = 113 years (given)<br>
+                    The total of my parent's age when they got married = Total age after 25 years of marriage – 2 * 25<br>
+                    113 – 50 = 63<br>
+                    Total age 15 years before = 63 years<br>
+                    Individual age 15 years before:<br>
+                    Ratio of their ages then = 11 : 10<br>
+                    Let their ages then be in terms of x.<br>
+                    11x + 10x = 63<br>
+                    21x = 63<br>
+                    x = 63 / 21 = 3<br>
+                    Father's age then = 11x = 11 * 3 = 33<br>
+                    Father's age now = 33 + 15 = 48 years
+                </div>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="quiz" data-question="13">
+                <h4>Question 13:</h4>
+                <p>My age in my sister's wedding was half my age now. My sister's age in her wedding was equal to my age now. If my sister got wedded 18 years back, find the ratio of my sister's age to my age 12 years later.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 13)">A) 8 : 5</li>
+                    <li onclick="checkAnswer(this, false, 13)">B) 7 : 4</li>
+                    <li onclick="checkAnswer(this, false, 13)">C) 3 : 2</li>
+                    <li onclick="checkAnswer(this, false, 13)">D) 5 : 3</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let my present age be x.<br>
+                    My age at my sister's wedding = x / 2<br>
+                    My sister's age at her wedding = my current age = x<br>
+                    The wedding was 18 years back that means, x – x / 2 = 18<br>
+                    x – x / 2 = 18<br>
+                    2x – x = 18 * 2<br>
+                    x = 36<br>
+                    My current age = 36 years<br>
+                    My sister's age at her wedding = my current age = x = 36 years<br>
+                    My sister's current age = 36 + 18 = 54 years<br>
+                    My age after 12 years = 36 + 12 = 48 years<br>
+                    My sister's age after 12 years = 54 + 12 = 66 years<br>
+                    Ratio = 66 : 48 = 11 : 8 = 8 : 5.8 = 8 : 5
+                </div>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="quiz" data-question="14">
+                <h4>Question 14:</h4>
+                <p>Ratio of ages of 2 people is 2 : 1. After 10 years the ratio of their ages is 3 : 2. Find their current ages.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 14)">A) 10, 5</li>
+                    <li onclick="checkAnswer(this, false, 14)">B) 12, 6</li>
+                    <li onclick="checkAnswer(this, false, 14)">C) 18, 9</li>
+                    <li onclick="checkAnswer(this, true, 14)">D) 20, 10</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be in terms of x.<br>
+                    Their current ages = 2x, x<br>
+                    Their ages 10 years later = 2x + 10, x + 10<br>
+                    Ratio of their ages 10 years later = 3 : 2<br>
+                    (2x + 10) / 3 = (x + 10) / 2<br>
+                    2 * (2x + 10) = 3 * (x + 10)<br>
+                    4x + 20 = 3x + 30<br>
+                    4x – 3x = 30 – 20<br>
+                    x = 10<br>
+                    Their current ages = 2x, x = 10 * 2, 10 = 20, 10
+                </div>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="quiz" data-question="15">
+                <h4>Question 15:</h4>
+                <p>T and E are sisters. The ratio of their ages when their brother was born was 6 : 5. The ratio of their ages when their brother was 12 years was 10 : 9. Find the age of T when her brother got married at the age of 28.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 15)">A) 45, 42 years</li>
+                    <li onclick="checkAnswer(this, false, 15)">B) 44, 41 years</li>
+                    <li onclick="checkAnswer(this, true, 15)">C) 46, 43 years</li>
+                    <li onclick="checkAnswer(this, false, 15)">D) 47, 44 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Ratio of ages of T and E at the time of their brother's birth = 6 : 5<br>
+                    Let these ages be in terms of x.<br>
+                    Their ages then = 6x, 5x<br>
+                    Ratio of their ages 12 years later = 10 : 9<br>
+                    Their ages after 12 years = 6x + 12, 5x + 12<br>
+                    (6x + 12) : (5x + 12) = 10 : 9<br>
+                    (6x + 12) / 10 = (5x + 12) / 9<br>
+                    9 * (6x + 12) = 10 * (5x + 12)<br>
+                    54x + 108 = 50x + 120<br>
+                    54x – 50x = 120 – 108<br>
+                    4x = 12<br>
+                    x = 12 / 4 = 3 years<br>
+                    Their age when brother was born = 6x, 5x = 18, 15 years<br>
+                    Their ages when their brother got married = Their ages at the time of brother's birth + 28<br>
+                    18 + 28, 15 + 28 = 46, 43 years
+                </div>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="quiz" data-question="16">
+                <h4>Question 16:</h4>
+                <p>The ages of 3 brothers are in a ratio 3:5:11. If the difference between the ages of the youngest and the eldest brother is 24 years, find the total of their ages.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 16)">A) 49 years</li>
+                    <li onclick="checkAnswer(this, false, 16)">B) 50 years</li>
+                    <li onclick="checkAnswer(this, true, 16)">C) 51 years</li>
+                    <li onclick="checkAnswer(this, false, 16)">D) 52 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be in relation to a constant term x.<br>
+                    The ages of the brother = 3x, 5x and 11x respectively.<br>
+                    The difference between the ages of the youngest and the eldest brother = 11x – 3x = 8x<br>
+                    The difference = 24 years (given)<br>
+                    8x = 24 years<br>
+                    x = 24 / 8 = 3 years<br>
+                    The sum of their ages = 3x + 5x + 11x = 19x<br>
+                    19x = 19 * 3 = 57 years
+                </div>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="quiz" data-question="17">
+                <h4>Question 17:</h4>
+                <p>The ages of 3 employees of a company are in a ratio 1/2 : 2/8 : 3/4. If the total of their ages is 120, find their individual ages in ascending order.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 17)">A) 40, 20, 60</li>
+                    <li onclick="checkAnswer(this, false, 17)">B) 20, 30, 70</li>
+                    <li onclick="checkAnswer(this, false, 17)">C) 30, 40, 50</li>
+                    <li onclick="checkAnswer(this, true, 17)">D) 20, 40, 60</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The ratio of the ages of employees = 1/2 : 2/8 : 3/4.<br>
+                    Multiplying each ratio by 8:<br>
+                    1/2 * 8 : 2/8 * 8 : 3/4 * 8<br>
+                    4 : 2 : 6<br>
+                    Using a constant x in terms of the ratio = 4x, 2x and 6x<br>
+                    4x + 2x + 6x = 12x<br>
+                    12x = 120 given<br>
+                    x = 10<br>
+                    4x = 40, 2x = 20 and 6x = 60<br>
+                    Their ages are 40, 20, 60<br>
+                    Their ages in ascending order = 20, 40, 60
+                </div>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="quiz" data-question="18">
+                <h4>Question 18:</h4>
+                <p>The ages of 3 people are x, y and z. It is known that 20% of x is equal to 40% of y and 50% of z. If the total of their ages is 190, find the age of the youngest person.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 18)">A) 30</li>
+                    <li onclick="checkAnswer(this, true, 18)">B) 40</li>
+                    <li onclick="checkAnswer(this, false, 18)">C) 50</li>
+                    <li onclick="checkAnswer(this, false, 18)">D) 35</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    20% of x = 40% of y = 50% of z<br>
+                    20 * x / 100 = 40 * y / 100 = 50 * z / 100<br>
+                    x / 5 = 2y / 5 = z / 2<br>
+                    Multiplying all sides by 10:<br>
+                    2x = 4y = 5z<br>
+                    The ratio of their ages = 2x : 4y : 5z = 10 : 5 : 4<br>
+                    The sum of their ages = 190 (given)<br>
+                    Assuming a constant r.<br>
+                    10r + 5r + 4r = 190<br>
+                    19r = 190<br>
+                    r = 10<br>
+                    Minimum age of them = 4r = 4 * 10 = 40
+                </div>
+            </div>
+
+            <!-- Question 19 -->
+            <div class="quiz" data-question="19">
+                <h4>Question 19:</h4>
+                <p>There are 3 members in a family. What can be the age of the eldest person if the age of three members is in AP with a common difference of 18 months. It is known that the sum of their ages is 58 years 6 months.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 19)">A) 18 years</li>
+                    <li onclick="checkAnswer(this, false, 19)">B) 19 years</li>
+                    <li onclick="checkAnswer(this, true, 19)">C) 21 years</li>
+                    <li onclick="checkAnswer(this, false, 19)">D) 22 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of the youngest person be x.<br>
+                    The age of the 3 members will be x, x + 1.5 and x + 3 years<br>
+                    Total of their ages = x + (x + 1.5) + (x + 3) years = 3x + 4.5 years<br>
+                    3x + 4.5 years = 58.5 years<br>
+                    3x = 58.5 – 4.5 = 54 years<br>
+                    x = 54 / 3 = 18 years<br>
+                    The age of the eldest person = 18 + 3 = 21 years.
+                </div>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="quiz" data-question="20">
+                <h4>Question 20:</h4>
+                <p>Ages of 3 individuals are in a ratio 3 : 1.5 : 4/3. If the sum of their ages is 70 years, find their individual ages.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 20)">A) 36, 17, 17</li>
+                    <li onclick="checkAnswer(this, false, 20)">B) 17, 19, 34</li>
+                    <li onclick="checkAnswer(this, false, 20)">C) 20, 25, 25</li>
+                    <li onclick="checkAnswer(this, true, 20)">D) 36, 18, 16</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The ratio of their ages = 3 : 1.5 : 4/3<br>
+                    Multiplying all sides by 6:<br>
+                    3 * 6 : 1.5 * 6 : 4/3 * 6<br>
+                    18 : 9 : 8<br>
+                    Taking a constant x, expressing all the terms in relation to x.<br>
+                    18x, 9x, 8x<br>
+                    The total of their ages = 70 (given)<br>
+                    18x + 9x + 8x = 70<br>
+                    35x = 70<br>
+                    x = 2<br>
+                    Their respective ages = 18x = 18 * 2, 9x = 9 * 2, 8x = 8 * 2<br>
+                    36, 18, 16 years.
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3 (Questions 21-30) -->
+        <div class="page" id="page3" data-page="3">
+            <!-- Question 21 -->
+            <div class="quiz" data-question="21">
+                <h4>Question 21:</h4>
+                <p>There are 3 members in a family with ages in a ratio 3 : 4 : 5. If the difference between the ages of the eldest and the youngest is 14 years, find the age of the middle child after 25 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 21)">A) 28 years</li>
+                    <li onclick="checkAnswer(this, false, 21)">B) 55 years</li>
+                    <li onclick="checkAnswer(this, true, 21)">C) 53 years</li>
+                    <li onclick="checkAnswer(this, false, 21)">D) 49 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The ratio = 3 : 4 : 5<br>
+                    Using a constant x and representing their age in terms of x.<br>
+                    3x, 4x, 5x<br>
+                    The difference between the ages of the youngest and the eldest child = 14 years<br>
+                    5x – 3x = 2x = 14 years<br>
+                    2x = 14 years, x = 14 / 2 = 7 years<br>
+                    Present age of the middle child = 4x = 4 * 7 = 28 years<br>
+                    Age after 25 years = 28 + 25 = 53 years.
+                </div>
+            </div>
+
+            <!-- Question 22 -->
+            <div class="quiz" data-question="22">
+                <h4>Question 22:</h4>
+                <p>There are 5 members in a family. If their ages are in a series with equal gaps, find the age of the eldest person. It is known that the sum of their ages is 120 years, and no one is younger than 20 years and older than 30 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 22)">A) 26 years</li>
+                    <li onclick="checkAnswer(this, false, 22)">B) 27 years</li>
+                    <li onclick="checkAnswer(this, true, 22)">C) 28 years</li>
+                    <li onclick="checkAnswer(this, false, 22)">D) 30 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The only possible AP where minimum value is 20 and maximum value is 28 with 5 terms and a common difference 2 is, 20, 22, 24, 26 and 28. Thus, the age of the eldest person is 28 years.
+                </div>
+            </div>
+
+            <!-- Question 23 -->
+            <div class="quiz" data-question="23">
+                <h4>Question 23:</h4>
+                <p>There are 3 members in a family named a, b and c. A is twice as old as b, b is thrice as old as c. If the difference between the ages of a and c is 40 years, find the age of the youngest member after 11 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 23)">A) 16 years</li>
+                    <li onclick="checkAnswer(this, false, 23)">B) 17 years</li>
+                    <li onclick="checkAnswer(this, false, 23)">C) 18 years</li>
+                    <li onclick="checkAnswer(this, true, 23)">D) 19 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The youngest among them is c (as per the question)<br>
+                    Age of a, b and c are in a ratio 6 : 3 : 1 as a = 2b and b = 3c<br>
+                    Taking a constant x and expressing the ratio in terms of x, 6x, 3x, x.<br>
+                    The difference between the eldest and the youngest is 40 year.<br>
+                    6x – x = 40 years<br>
+                    5x = 40, x = 8 years<br>
+                    Age of the youngest member c is x = 8 years<br>
+                    Age of c after 11 years = 8 + 11 = 19 years
+                </div>
+            </div>
+
+            <!-- Question 24 -->
+            <div class="quiz" data-question="24">
+                <h4>Question 24:</h4>
+                <p>In an office there are 3 employees in a department named a, b and c. a is 120% of b and b is 50% of c. If they all started working at an age of 20 years, find the experience of a. It is known the total of their ages is 92 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 24)">A) 10 years</li>
+                    <li onclick="checkAnswer(this, true, 24)">B) 12 years</li>
+                    <li onclick="checkAnswer(this, false, 24)">C) 15 years</li>
+                    <li onclick="checkAnswer(this, false, 24)">D) 20 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of a, b and c be x, y and z.<br>
+                    B = 50% of c = 0.5c<br>
+                    A = 120% of b = 120 * 0.5c / 100 = 0.8c<br>
+                    X + y + z = 92 (given)<br>
+                    0.5c + 0.8c + c = 92<br>
+                    2.3c = 92<br>
+                    C = 40 years<br>
+                    A = 0.8 c = 32<br>
+                    It is known that all of them started working at an age of 20 years.<br>
+                    Experience of a = 32 – 20 = 12 years.
+                </div>
+            </div>
+
+            <!-- Question 25 -->
+            <div class="quiz" data-question="25">
+                <h4>Question 25:</h4>
+                <p>Out of 3 students a, b and c, a is 18 years old if the ages of the b and c are in a ratio 2 : 3 and the ratio of age of a and b is 6 : 5, find the average age of all the 3 students.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 25)">A) 16.5 years</li>
+                    <li onclick="checkAnswer(this, false, 25)">B) 17.5 years</li>
+                    <li onclick="checkAnswer(this, true, 25)">C) 18.5 years</li>
+                    <li onclick="checkAnswer(this, false, 25)">D) 19.5 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The ratio of ages of a and b is 6 : 5.<br>
+                    The ratio of ages of b and c is 2 : 3.<br>
+                    The age of a is 18 (given).<br>
+                    Age of b = 18 / 6 * 5 = 15 years<br>
+                    Age of c = 15 / 2 * 3 = 22.5 years<br>
+                    The total of their ages = 15 + 18 + 22.5 = 55.5 years<br>
+                    Average of their age = 55.5 / 3 = 18.5 years.
+                </div>
+            </div>
+
+            <!-- Question 26 -->
+            <div class="quiz" data-question="26">
+                <h4>Question 26:</h4>
+                <p>The ratio of ages of 3 people is 2 : 3 : 4 after 5 years the ratio of their ages will be 5 : 7 : 9. Find their current ages.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 26)">A) 20, 30 and 40 years</li>
+                    <li onclick="checkAnswer(this, false, 26)">B) 25, 35 and 45 years</li>
+                    <li onclick="checkAnswer(this, false, 26)">C) 30, 40, and 50 years</li>
+                    <li onclick="checkAnswer(this, false, 26)">D) 16, 24 and 32 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be in terms of x.<br>
+                    Their age now = 2x, 3x and 4x, respectively.<br>
+                    Their ages after 5 years = 2x + 5, 3x + 5 and 4x + 5 years respectively.<br>
+                    The ratio of their ages after 5 years = 5 : 7 : 9<br>
+                    (2x + 5) / 5 = (3x + 5) / 7 = (4x + 5) / 9<br>
+                    Taking any 2 equations:<br>
+                    (2x + 5) / 5 = (3x + 5) / 7<br>
+                    7 * (2x + 5) = 5 * (3x + 5)<br>
+                    14x + 35 = 15x + 25<br>
+                    15x – 14x = 35 – 25<br>
+                    X = 10<br>
+                    Their current ages = 2x, 3x and 4x respectively = 20, 30 and 40 years.
+                </div>
+            </div>
+
+            <!-- Question 27 -->
+            <div class="quiz" data-question="27">
+                <h4>Question 27:</h4>
+                <p>A couple has 3 children. Each was born at a gap of 3 years and 4 months. If the age of the eldest brother is twice as old as the youngest brother, find the age of the middle brother.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 27)">A) 8 years</li>
+                    <li onclick="checkAnswer(this, false, 27)">B) 9 years</li>
+                    <li onclick="checkAnswer(this, true, 27)">C) 10 years</li>
+                    <li onclick="checkAnswer(this, false, 27)">D) 11 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of the youngest brother be x.<br>
+                    Age of the eldest brother = x + (3 years 4 months) * 2 = x + 6 years 8 months<br>
+                    It is given that age of the eldest brother is twice the age of the youngest brother.<br>
+                    2x = x + 6 years 8 months<br>
+                    2x - x = 6 years 8 months<br>
+                    x = 6 years 8 months<br>
+                    Age of the middle brother = age of the youngest brother + 3 years 4 months<br>
+                    = 6 years 8 months + 3 years 4 months = 10 years
+                </div>
+            </div>
+
+            <!-- Question 28 -->
+            <div class="quiz" data-question="28">
+                <h4>Question 28:</h4>
+                <p>13 years back my father's age was triple of my brother's age. Five years from now my father will be twice as old as my brother. Find my age now if I am twice of my brother's age.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 28)">A) 62 years</li>
+                    <li onclick="checkAnswer(this, false, 28)">B) 52 years</li>
+                    <li onclick="checkAnswer(this, false, 28)">C) 42 years</li>
+                    <li onclick="checkAnswer(this, true, 28)">D) 31 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let my brother's age 13 years back be x.<br>
+                    My father's age 13 years back = 3x<br>
+                    My brother's age 5 years later = x + 13 + 5 = x + 18<br>
+                    My father's age 5 years later = 3x + 13 + 5 = 3x + 18<br>
+                    It is given that after 5 years my father will be twice as old as my brother.<br>
+                    3x + 18 = 2(x + 18)<br>
+                    3x + 18 = 2x + 36<br>
+                    3x - 2x = 36 - 18<br>
+                    x = 18<br>
+                    My brother's age now = x + 13 = 18 + 13 = 31 years<br>
+                    My age = twice of my brother's age now = 31 / 2 = 15.5 years
+                </div>
+            </div>
+
+            <!-- Question 29 -->
+            <div class="quiz" data-question="29">
+                <h4>Question 29:</h4>
+                <p>After 7 years my father will be thrice of my age. After 29 years he will be twice of my age, find my age now.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 29)">A) 12 years</li>
+                    <li onclick="checkAnswer(this, true, 29)">B) 15 years</li>
+                    <li onclick="checkAnswer(this, false, 29)">C) 16 years</li>
+                    <li onclick="checkAnswer(this, false, 29)">D) 18 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let my age now be x.<br>
+                    My age after 7 years = 7 + x<br>
+                    My father's age after 7 years = thrice of my age = (7 + x) * 3 = 21 + 3x<br>
+                    My age after 29 years = x + 29<br>
+                    My father's age after 29 years = (x + 29) * 2 = 2x + 58<br>
+                    21 + 3x + (29 - 7) = 2x + 58<br>
+                    21 + 3x + 22 = 2x + 58<br>
+                    3x + 43 = 2x + 58<br>
+                    3x - 2x = 58 - 43<br>
+                    x = 15
+                </div>
+            </div>
+
+            <!-- Question 30 -->
+            <div class="quiz" data-question="30">
+                <h4>Question 30:</h4>
+                <p>5 years from now my age will be equal to my father's age when he got married. The ratio of my father's age to my mother's age at the time of their wedding was 7 : 6. If at the time of wedding my mother was 24 years old, find my age now.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 30)">A) 20 years</li>
+                    <li onclick="checkAnswer(this, false, 30)">B) 21 years</li>
+                    <li onclick="checkAnswer(this, false, 30)">C) 22 years</li>
+                    <li onclick="checkAnswer(this, true, 30)">D) 23 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let my age now be x.<br>
+                    My father's age at the time of their wedding = my age 5 years later = x + 5<br>
+                    Ratio of age of my father to my mother at the time of their wedding = 7 : 6<br>
+                    My mother's age at their wedding = 24 years (given)<br>
+                    My father's age at his wedding = (24 / 6) * 7 = 4 * 7 = 28 years<br>
+                    My age after 5 years = my father's age at his wedding = 28 years<br>
+                    My current age = 28 - 5 = 23 years
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4 (Questions 31-35) -->
+        <div class="page" id="page4" data-page="4">
+            <!-- Question 31 -->
+            <div class="quiz" data-question="31">
+                <h4>Question 31:</h4>
+                <p>Find the total age of 3 brothers, if, their ages are in the ratio 4 : 7 : 9 and the eldest of them is 20 years elder than the youngest brother.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 31)">A) 70 years</li>
+                    <li onclick="checkAnswer(this, true, 31)">B) 80 years</li>
+                    <li onclick="checkAnswer(this, false, 31)">C) 90 years</li>
+                    <li onclick="checkAnswer(this, false, 31)">D) 100 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of the brothers be in terms of x.<br>
+                    The age of the brothers is in a ratio = 4 : 7 : 9<br>
+                    The ages of the brothers are 4x, 7x and 9x.<br>
+                    The difference between the ages of the eldest and the youngest brother is 20 years.<br>
+                    9x - 4x = 20 years<br>
+                    5x = 20<br>
+                    x = 20 / 5 = 4 years<br>
+                    The total age of the brothers:<br>
+                    4x = 4 * 4 = 16 years<br>
+                    7x = 7 * 4 = 28 years<br>
+                    9x = 9 * 4 = 36 years<br>
+                    Total age = 16 + 28 + 36 = 80 years
+                </div>
+            </div>
+
+            <!-- Question 32 -->
+            <div class="quiz" data-question="32">
+                <h4>Question 32:</h4>
+                <p>The average age of 3 students is 21 years. If the ratio of their ages is x : y : z, find the value with which y is related. It is known that x : y = 1 : 2 and y : z = 1 : 3.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 32)">A) 12 years</li>
+                    <li onclick="checkAnswer(this, false, 32)">B) 13 years</li>
+                    <li onclick="checkAnswer(this, true, 32)">C) 14 years</li>
+                    <li onclick="checkAnswer(this, false, 32)">D) 15 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    x : y = 1 : 2 and y : z = 1 : 3<br>
+                    x : y : z = 1 * 1 : 2 * 1 : 3 * 2<br>
+                    1 : 2 : 6<br>
+                    Let these ratios be in terms of a.<br>
+                    a + 2a + 6a = 21 * 3 = 63 years<br>
+                    9a = 63 years<br>
+                    a = 63 / 9 = 7 years<br>
+                    y = 2a = 7 * 2 = 14 years
+                </div>
+            </div>
+
+            <!-- Question 33 -->
+            <div class="quiz" data-question="33">
+                <h4>Question 33:</h4>
+                <p>3 friends a, b and c went for an internship in a company. They had different levels of experiences. If their age was in a ratio 4 : 5 : 6 and their experience was in a ratio 2 : 3 : 4 respectively, find the friend with the least age to start working. It is known that the ratio of their total age to their total experience is 10 : 1.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 33)">A) a</li>
+                    <li onclick="checkAnswer(this, false, 33)">B) b</li>
+                    <li onclick="checkAnswer(this, false, 33)">C) c</li>
+                    <li onclick="checkAnswer(this, false, 33)">D) They started at the same age</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their age be in terms of x and their experience be in terms of y.<br>
+                    Their respective ages = 4 : 5 : 6 = 4x, 5x and 6x<br>
+                    Their respective experiences = 2 : 3 : 4 = 2y, 3y and 4y<br>
+                    Total age in terms of x = 4x + 5x + 6x = 15x<br>
+                    Total experience in terms of y = 2y + 3y + 4y = 9y<br>
+                    Ratio of age to experience = 10 : 1<br>
+                    15x : 9y = 10 : 1<br>
+                    15x / 10 = 9y / 1<br>
+                    1.5x = 9y<br>
+                    x = 9 / 1.5 y = 6y<br>
+                    x = 6y<br>
+                    Age and experience of a in terms of y = 4x, 2y = 6 * 4y, 2y = 24y, 2y<br>
+                    Age and experience of b in terms of y = 5x, 3y = 6 * 5y, 3y = 30y, 3y<br>
+                    Age and experience of c in terms of y = 6x, 4y = 6 * 6y, 4y = 36y, 4y<br>
+                    Age at which they started working:<br>
+                    a = 24y - 2y = 22y, b = 30y - 3y = 27y and c = 36y - 4y = 32y<br>
+                    Lowest of the above is 22y that is a.
+                </div>
+            </div>
+
+            <!-- Question 34 -->
+            <div class="quiz" data-question="34">
+                <h4>Question 34:</h4>
+                <p>3 friends are 1.5x, 2x and 2.5x years old. If the total of their ages is 45 years, find the age of second friend.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 34)">A) 15 years</li>
+                    <li onclick="checkAnswer(this, false, 34)">B) 12 years</li>
+                    <li onclick="checkAnswer(this, false, 34)">C) 10 years</li>
+                    <li onclick="checkAnswer(this, false, 34)">D) 10.5 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The total age of the three friends = 45 years<br>
+                    Total age of the friends in terms of x = 1.5x + 2x + 2.5x = 6x<br>
+                    6x = 45<br>
+                    x = 45 / 6 = 7.5 years = 7 years 6 months<br>
+                    Age of the second friend = 7 years 6 months * 2 = 15 years
+                </div>
+            </div>
+
+            <!-- Question 35 -->
+            <div class="quiz" data-question="35">
+                <h4>Question 35:</h4>
+                <p>A group of 3 friends went for a training of 6 months. After the training, the sum of their ages was 90 years and were in a ratio 5 : 6 : 7. Find their ages before the training.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 35)">A) 25 years, 30 years, 35 years</li>
+                    <li onclick="checkAnswer(this, false, 35)">B) 24 years, 29 years, 34 years</li>
+                    <li onclick="checkAnswer(this, false, 35)">C) 25 years 6 months, 30 years 6 months, 35 years 6 months</li>
+                    <li onclick="checkAnswer(this, true, 35)">D) 24 years 6 months, 29 years 6 months, 34 years 6 months</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Total age after the training = 90 years<br>
+                    Ratio of age after the training = 5 : 6 : 7<br>
+                    Let their ages be in terms of x.<br>
+                    Their ages after the training in terms of x = 5x, 6x and 7x<br>
+                    5x + 6x + 7x = 18x = 90<br>
+                    18x = 90<br>
+                    x = 90 / 18 = 5<br>
+                    x = 5<br>
+                    Their individual ages after the training = 5x = 25, 6x = 30, 7x = 35 years<br>
+                    Their ages before the training = 25 years - 6 months, 30 years - 6 months, 35 years - 6 months<br>
+                    24 years 6 months, 29 years 6 months, 34 years 6 months.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+                <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" data-page="next" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 <span>Gowthamraj Network</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Global variables to track quiz progress
+        let answeredQuestions = {};
+        let totalQuestions = 35;
+        let questionsPerPage = 10;
+        
+        // Toggle sidebar
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.querySelector('.overlay').classList.toggle('active');
+        });
+        
+        // Close sidebar when clicking overlay
+        document.querySelector('.overlay').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('active');
+            this.classList.remove('active');
+        });
+        
+        // Function to check answers
+        function checkAnswer(element, isCorrect, questionNumber) {
+            // Reset all options
+            const options = element.parentElement.querySelectorAll('li');
+            options.forEach(option => {
+                option.classList.remove('correct');
+                option.classList.remove('incorrect');
+            });
+            
+            // Highlight selected option
+            if (isCorrect) {
+                element.classList.add('correct');
+            } else {
+                element.classList.add('incorrect');
+            }
+            
+            // Show explanation
+            const explanation = element.parentElement.nextElementSibling;
+            explanation.style.display = 'block';
+            
+            // Mark question as answered
+            const quizContainer = element.closest('.quiz');
+            quizContainer.classList.add('answered');
+            
+            // Track answered question
+            if (questionNumber) {
+                answeredQuestions[questionNumber] = true;
+                
+                // Save progress to localStorage
+                saveProgress();
+            }
+            
+            // Update progress
+            updateProgress();
+            
+            // Check if all questions on current page are answered
+            checkPageCompletion();
+        }
+        
+        // Function to update progress bar and counter
+        function updateProgress() {
+            const answeredCount = Object.keys(answeredQuestions).length;
+            const progressPercent = (answeredCount / totalQuestions) * 100;
+            
+            // Update progress bar
+            document.querySelector('.progress-bar').style.width = progressPercent + '%';
+            document.querySelector('.progress-bar').setAttribute('aria-valuenow', progressPercent);
+            
+            // Update counter
+            document.getElementById('answered-count').textContent = answeredCount;
+        }
+        
+        // Function to check if all questions on current page are answered
+        function checkPageCompletion() {
+            const currentPage = document.querySelector('.page.active');
+            const pageNumber = parseInt(currentPage.getAttribute('data-page'));
+            const questionsOnPage = currentPage.querySelectorAll('.quiz');
+            
+            // Count answered questions on this page
+            let answeredOnPage = 0;
+            questionsOnPage.forEach(quiz => {
+                if (quiz.classList.contains('answered')) {
+                    answeredOnPage++;
+                }
+            });
+            
+            // If all questions on page are answered, move to next page after a short delay
+            if (answeredOnPage === questionsOnPage.length && pageNumber < 4) {
+                setTimeout(() => {
+                    showPage(pageNumber + 1);
+                    
+                    // Update active class in pagination
+                    document.querySelectorAll('.pagination .page-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    document.querySelector(`.pagination .page-item:nth-child(${pageNumber + 1})`).classList.add('active');
+                    
+                    // Scroll to top of content
+                    document.querySelector('.content').scrollTop = 0;
+                    window.scrollTo(0, 0);
+                }, 1500); // 1.5 second delay before moving to next page
+            }
+        }
+        
+        // Pagination functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show first page by default
+            showPage(1);
+            
+            // Add click event to pagination links
+            const paginationLinks = document.querySelectorAll('.pagination .page-link');
+            paginationLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get page number
+                    const pageNum = this.getAttribute('data-page');
+                    
+                    if (pageNum === 'next') {
+                        // Get current active page
+                        const activePage = document.querySelector('.pagination .active');
+                        const nextPage = activePage.nextElementSibling;
+                        
+                        if (nextPage && nextPage.querySelector('.page-link').getAttribute('data-page') !== 'next') {
+                            const nextPageNum = nextPage.querySelector('.page-link').getAttribute('data-page');
+                            showPage(nextPageNum);
+                            
+                            // Update active class
+                            activePage.classList.remove('active');
+                            nextPage.classList.add('active');
+                        } else {
+                            // If on last page, go to first page
+                            showPage(1);
+                            
+                            // Update active class
+                            activePage.classList.remove('active');
+                            document.querySelector('.pagination li:first-child').classList.add('active');
+                        }
+                    } else {
+                        showPage(pageNum);
+                        
+                        // Update active class
+                        document.querySelectorAll('.pagination .page-item').forEach(item => {
+                            item.classList.remove('active');
+                        });
+                        this.parentElement.classList.add('active');
+                    }
+                    
+                    // Scroll to top of content
+                    window.scrollTo(0, 0);
+                });
+            });
+            
+            // Initialize progress
+            updateProgress();
+            
+            // Check for previously answered questions (if stored in localStorage)
+            restoreProgress();
+        });
+        
+        // Function to show specific page
+        function showPage(pageNum) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById('page' + pageNum).classList.add('active');
+        }
+        
+        // Function to restore progress from localStorage (if available)
+        function restoreProgress() {
+            const savedAnswers = localStorage.getItem('ageQuizAnswers');
+            if (savedAnswers) {
+                answeredQuestions = JSON.parse(savedAnswers);
+                
+                // Mark questions as answered in the UI
+                Object.keys(answeredQuestions).forEach(questionNum => {
+                    const quizElement = document.querySelector(`.quiz[data-question="${questionNum}"]`);
+                    if (quizElement) {
+                        quizElement.classList.add('answered');
+                    }
+                });
+                
+                // Update progress
+                updateProgress();
+            }
+        }
+        
+        // Save progress to localStorage when answering questions
+        function saveProgress() {
+            localStorage.setItem('ageQuizAnswers', JSON.stringify(answeredQuestions));
+        }
+    </script>
+</body>
+</html>
