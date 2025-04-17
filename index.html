@@ -48,7 +48,7 @@
    .progress-bar {
        background-color: #28a745;
        transition: width 0.5s ease;
-   }</style>
+   }</style> 
 <body>
     <!-- Toggle Button -->
     <button id="sidebarToggle"><i class="fas fa-bars"></i></button>
@@ -123,7 +123,7 @@
                 <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div class="text-end mt-1">
-                <small class="text-muted">Questions answered: <span id="answered-count">0</span>/35</small>
+                <small class="text-muted">Questions answered: <span id="answered-count">0</span>/55</small>
             </div>
         </div>
         
@@ -1004,6 +1004,489 @@
                     24 years 6 months, 29 years 6 months, 34 years 6 months.
                 </div>
             </div>
+
+              <!-- Question 36 -->
+              <div class="quiz" data-question="36">
+                <h4>Question 36:</h4>
+                <p>The age of 5 people are in a ratio 2 : 3 : 4 : 5 : 6. If the age of the eldest of them is 42 years, find the average of their ages.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 36)">A) 25 years</li>
+                    <li onclick="checkAnswer(this, false, 36)">B) 26 years</li>
+                    <li onclick="checkAnswer(this, false, 36)">C) 27 years</li>
+                    <li onclick="checkAnswer(this, true, 36)">D) 28 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages of the following people be in terms of a constant x.
+                    The age in terms of x will be 2x, 3x, 4x, 5x, and 6x.
+                    The age of the eldest person = 6x = 42 years
+                    6x = 42 years
+                    X = 42 / 6 =7 years
+                    2x = 2 * 7 = 14 years
+                    3x = 3 * 7 = 21 years
+                    4x = 4 * 7 = 28 years
+                    5x = 5 * 7 = 35 years
+                    The respective ages of these 5 people are 14, 21, 28, 35 and 42 years.
+                    The sum of these ages = 14 + 21 + 28 + 35 + 42 = 140
+                    Average age of the members = 140 / 5 = 28 years
+                </div>
+            </div>
+
+            <!-- Question 37 -->
+            <div class="quiz" data-question="37">
+                <h4>Question 37:</h4>
+                <p>There are 5 students in a batch with ages x, 1.1x, y, 1.1y and 1.2y. Find the average age of the batch if it is known that x = 1/2y and y – x = 10.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 37)">A) 16.5 years</li>
+                    <li onclick="checkAnswer(this, false, 37)">B) 17.5 years</li>
+                    <li onclick="checkAnswer(this, true, 37)">C) 17.4 years</li>
+                    <li onclick="checkAnswer(this, false, 37)">D) 16.4 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    It is given that x = 1/2y and y – x = 10
+                    X = 1/2y, y = 2x
+                    Y – x = 10, 2x – x = 10
+                    X = 10 years
+                    Y = 2x = 2 * 10 = 20 years
+                    1.1x = 1.1 * 10 = 11 years
+                    1.1y = 1.1 * 20 = 22 years
+                    1.2y = 1.2 * 20 = 24 years
+                    Age of the 5 students = 10, 20, 11, 22 and 24 years
+                    Sum ages of 5 students = 10 + 20 + 11 + 22 + 24 = 87
+                    Average age of the 5 students = 87 / 5 = 17.4 years
+                </div>
+            </div>
+
+            <!-- Question 38 -->
+            <div class="quiz" data-question="38">
+                <h4>Question 38:</h4>
+                <p>The sum of ages of 10 individuals is 100 years. If their ages are in a ratio 1 : 2 : 3 : 4 : 5 : 6 : 8 : 6 : 10 : 5, find the average of the 5 youngest people.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 38)">A) 5 years</li>
+                    <li onclick="checkAnswer(this, false, 38)">B) 5.5 years</li>
+                    <li onclick="checkAnswer(this, true, 38)">C) 6 years</li>
+                    <li onclick="checkAnswer(this, false, 38)">D) 6.8 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages be in terms of a constant x.
+                    Their ages in terms of x = x, 2x, 3x, 4x, 5x, 6x, 8x, 6x, 10x and 5x
+                    Sum of the ages = 100 years (given)
+                    Sum of ages in terms of x = 50x
+                    50x = 100, x = 2
+                    The ages of 10 people = 2, 4, 6, 8, 10, 12, 16, 12, 20 and 10 years
+                    The 5 minimum ages = 2, 4, 6, 8 and 10 years
+                    Sum of their ages = 30 years
+                    Average age of 5 minimum ages = 30 / 5 = 6 years
+                </div>
+            </div>
+
+            <!-- Question 39 -->
+            <div class="quiz" data-question="39">
+                <h4>Question 39:</h4>
+                <p>There are 20 students in a class. If the average age of the students is 20 years including the age of the teacher and reduces by 10% when the age of the teacher is removed, find the age of the teacher.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 39)">A) 60 years</li>
+                    <li onclick="checkAnswer(this, false, 39)">B) 65 years</li>
+                    <li onclick="checkAnswer(this, false, 39)">C) 70 years</li>
+                    <li onclick="checkAnswer(this, false, 39)">D) 72 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The average age of the class including the age of the teacher = 20 * 21 (20 students and 1 Teacher makes 21) 20 * 21 = 420
+                    The average without the age of teacher = 20 – 10% of 20 = 20 – 10 * 20 / 100 = 20 – 2 = 18 year
+                    Average age of 20 boys = 18 years
+                    Total age of 20 boys = 20 * 18 = 360 years
+                    Age of the teacher = 420 – 360 = 60 years
+                </div>
+            </div>
+
+            <!-- Question 40 -->
+            <div class="quiz" data-question="40">
+                <h4>Question 40:</h4>
+                <p>There are 7 members in a family. The eldest among them is 42 years old and the youngest among them is 20 years old. If the average age of the rest of the 5 members is 30 years find the average age of the family after 3 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 40)">A) 22.2 years</li>
+                    <li onclick="checkAnswer(this, true, 40)">B) 33.3 years</li>
+                    <li onclick="checkAnswer(this, false, 40)">C) 34.4 years</li>
+                    <li onclick="checkAnswer(this, false, 40)">D) 35 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The given ages = 42 and 20 years
+                    The average age of other 5 people = 30 years
+                    The total age of 5 people = 5 * 30 years = 150 years
+                    The total age of all the members = total age of the 5 people + age of the given two people
+                    150 + 42 + 20 years = 212 years
+                    Average age of the entire family = 212 / 7 = 30.28 ≈ 30.3 years
+                    Average age of the family after 3 years = 30.3 + 3 = 33.3 years
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5 (Questions 41-50) -->
+        <div class="page" id="page5" data-page="5">
+            <!-- Question 41 -->
+            <div class="quiz" data-question="41">
+                <h4>Question 41:</h4>
+                <p>There are 7 workers in a factory, out of which 4 share an average age of 40 years and the rest have an average age of 15% less than the average age of the 4 people. Find the total age of the union 5 years later.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 41)">A) 250 years</li>
+                    <li onclick="checkAnswer(this, false, 41)">B) 259 years</li>
+                    <li onclick="checkAnswer(this, true, 41)">C) 297 years</li>
+                    <li onclick="checkAnswer(this, false, 41)">D) 306 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The average age of 4 elder employees = 40
+                    Total age of these 4 employees = 40 * 4 = 160
+                    Average age of the rest 3 employees = 15% less than that of the senior employees
+                    Average age of the junior employees = 40 – 15% of 40 = 40 – 40 * 15 / 100
+                    40 – 6 = 34 years
+                    Average age of 3 junior employees = 34
+                    Total age of 3 junior employees = 34 * 3 = 102 years
+                    Total age of all the employees = 102 + 160 = 262 years
+                    Total age of the employees after 5 years = 262 + 5 * 7 = 262 + 35 = 297 years
+                </div>
+            </div>
+
+            <!-- Question 42 -->
+            <div class="quiz" data-question="42">
+                <h4>Question 42:</h4>
+                <p>There are 5 offices in a locality. Each office has 20 employees. If altogether the average age of the employees is 35.4 and the minimum age to join a company is 20 years, find the average experience of the employees.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 42)">A) 14.6 years</li>
+                    <li onclick="checkAnswer(this, false, 42)">B) 14.8 years</li>
+                    <li onclick="checkAnswer(this, false, 42)">C) 15.2 years</li>
+                    <li onclick="checkAnswer(this, true, 42)">D) 15.4 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Total age of the employees = average age * total number of employees
+                    Total number of employees = employees per office * number of offices = 20 * 5 = 100
+                    Total age of the employees = 100 * 35.4 = 3540
+                    Minimum age for getting a job = 100
+                    Total age of the employees when they got the job = 100 * 20 = 2000
+                    Total experience = 3540 – 2000 = 1540 years
+                    Average experience = 1540 / 100 = 15.4 years
+                </div>
+            </div>
+
+            <!-- Question 43 -->
+            <div class="quiz" data-question="43">
+                <h4>Question 43:</h4>
+                <p>Find the total age of a family of 7 people, if the age of eldest and youngest members is 50 and 21, respectively. And the members of the rest of the 5 members are in a ratio 2.5 : 3 : 3.5 : 4 : 4.5, the age of the 2nd youngest being 25 years.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 43)">A) 200 years</li>
+                    <li onclick="checkAnswer(this, true, 43)">B) 245 years</li>
+                    <li onclick="checkAnswer(this, false, 43)">C) 250 years</li>
+                    <li onclick="checkAnswer(this, false, 43)">D) 300 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The total age of the family = Age of the eldest + age of the youngest + age of the 5 rest members
+                    Age of the 5 members are in a ratio 2.5 : 3 : 3.5 : 4 : 4.5
+                    Let these ages be in relation to a constant x.
+                    2.5x = 25 (Given)
+                    X = 10
+                    The age of the rest of the members of the family:
+                    3x = 30, 3.5x = 35, 4x = 40 and 4.5x = 45
+                    The total age of the family = 20 + 25 + 30 + 35 + 40 + 45 + 50 = 245 years
+                </div>
+            </div>
+
+            <!-- Question 44 -->
+            <div class="quiz" data-question="44">
+                <h4>Question 44:</h4>
+                <p>A is twice old as B, B is thrice old as C, C is 1.2 times as old as D. If the total of their ages is 114 years, find the age of A in terms of D.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 44)">A) 2.2d</li>
+                    <li onclick="checkAnswer(this, false, 44)">B) 5.6d</li>
+                    <li onclick="checkAnswer(this, true, 44)">C) 7.2d</li>
+                    <li onclick="checkAnswer(this, false, 44)">D) 8d</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of A, B, C and D be p, q, r and s.
+                    P = 2Q
+                    Q = 3R
+                    2q = 3R * 2 = 6R
+                    P = 6R
+                    R = 1.2 S
+                    P = 2Q = 6 R = 6 * 1.2 S
+                    P = 7.2 S
+                    A = 7.2D
+                </div>
+            </div>
+
+            <!-- Question 45 -->
+            <div class="quiz" data-question="45">
+                <h4>Question 45:</h4>
+                <p>There are 5 members in a family. The eldest is 35 years older than the youngest. If the ratio of the family in descending order is 11 : 10 : 6 : 5 : 4, Find the average age of the family.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 45)">A) 36 years</li>
+                    <li onclick="checkAnswer(this, false, 45)">B) 40 years</li>
+                    <li onclick="checkAnswer(this, false, 45)">C) 42 years</li>
+                    <li onclick="checkAnswer(this, false, 45)">D) 45 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages of the family be in terms of x.
+                    11 : 10 : 6 : 5 : 4 = 11x, 10x, 6x, 5x and 4x.
+                    The difference between the eldest and the youngest is 35 years(given).
+                    11x – 4x = 35 years
+                    7x = 35 years
+                    X = 35 / 7 = 5 years
+                    The ages of the family:
+                    11x = 11 * 5 = 55
+                    10x = 10 * 5 = 50
+                    6x = 6 * 5 = 30
+                    5x = 5 * 5 = 25
+                    4x = 4 * 5 = 20
+                    Total age of the family = 55 + 50 + 30 + 25 + 20 = 180 years
+                    Average age of the family = 180 / 5 = 36 years
+                </div>
+            </div>
+
+            <!-- Question 46 -->
+            <div class="quiz" data-question="46">
+                <h4>Question 46:</h4>
+                <p>Age of 7 people are in a ratio 9 : 12 : 13 : 14 : 5 : 9 : 10. If the total of their ages is 432, find the age of the eldest person.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 46)">A) 72 years</li>
+                    <li onclick="checkAnswer(this, true, 46)">B) 84 years</li>
+                    <li onclick="checkAnswer(this, false, 46)">C) 70 years</li>
+                    <li onclick="checkAnswer(this, false, 46)">D) 86 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the ages of the people be in terms of x.
+                    Their ages = 9x, 12x, 13x, 14x, 5x, 9x and 10x
+                    Total of their ages = 9x + 12x + 13x + 14x + 5x + 9x + 10x = 72x
+                    72x = 432 years
+                    X = 432/72 = 6 years
+                    Age of the eldest person = 6 * 14 = 84 years
+                </div>
+            </div>
+
+            <!-- Question 47 -->
+            <div class="quiz" data-question="47">
+                <h4>Question 47:</h4>
+                <p>The age of 5 people are in a ratio 1 : 3 : 5 : 7 : 9. If the difference between the age of each individual when arranged in ascending order is 12 years, find their average age.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 47)">A) 20 years</li>
+                    <li onclick="checkAnswer(this, false, 47)">B) 25 years</li>
+                    <li onclick="checkAnswer(this, true, 47)">C) 30 years</li>
+                    <li onclick="checkAnswer(this, false, 47)">D) 35 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be in terms of x.<br>
+                    Their ages in terms of x = x, 3x, 5x, 7x and 9x<br>
+                    Difference between their ages = 12 years<br>
+                    3x – x = 5x – 3x = 7x – 5x = 9x – 7x = 12 years<br>
+                    3x – x = 2x = 12 years<br>
+                    2x = 12 years<br>
+                    X = 12/2 = 6 years<br>
+                    X = 6 years<br>
+                    3x = 6 * 3 = 18 years<br>
+                    5x = 6 * 5 = 30 years<br>
+                    7x = 6 * 7 = 42 years<br>
+                    9x = 6 * 9 = 54 years<br>
+                    Total age of the group = 6 + 18 + 30 + 42 + 54 = 150 years<br>
+                    Average age = 150/5 = 30 years
+                </div>
+            </div>
+
+            <!-- Question 48 -->
+            <div class="quiz" data-question="48">
+                <h4>Question 48:</h4>
+                <p>If the average age of a group of 4 students is 20% more than the average age of a group of 7 students whose total age is 119 years, find the total age of the first group.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 48)">A) 80 years</li>
+                    <li onclick="checkAnswer(this, true, 48)">B) 81.6 years</li>
+                    <li onclick="checkAnswer(this, false, 48)">C) 82.2 years</li>
+                    <li onclick="checkAnswer(this, false, 48)">D) 83.8 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The total age of group 2 of students = 119 years<br>
+                    The average age of students of group 2 = total age/number of students<br>
+                    119/7 = 17 years<br>
+                    Average age of students of first group = 17 years + 20% of 17 years<br>
+                    17 years + 17 * 20/100 years = 17 + 3.4 years = 20.4 years<br>
+                    Total age of the students of the first group = 20.4 * 4<br>
+                    20.4 * 4 = 81.6 years
+                </div>
+            </div>
+
+            <!-- Question 49 -->
+            <div class="quiz" data-question="49">
+                <h4>Question 49:</h4>
+                <p>My sister is twice the age of my brother. My brother is 1/7th the age of my father. If the ratio of ages of my father to my mother is 17.5 : 18, find my sister's age. It Is known that my mother is 36 years old.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 49)">A) 20 years</li>
+                    <li onclick="checkAnswer(this, false, 49)">B) 12 years</li>
+                    <li onclick="checkAnswer(this, false, 49)">C) 8 years</li>
+                    <li onclick="checkAnswer(this, true, 49)">D) 10 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Age of my mother = 36 years (given)<br>
+                    Age of my father = (36/18) * 17.5 = 2 * 17.5<br>
+                    2 * 17.5 = 35<br>
+                    My father's age is 35 years old.<br>
+                    Brother's age = 1/7th of my father's age<br>
+                    Brother's age = 35/7 = 5 years<br>
+                    Sister's age is twice my brother's age.<br>
+                    Sister's age = 5 * 2 = 10 years
+                </div>
+            </div>
+
+            <!-- Question 50 -->
+            <div class="quiz" data-question="50">
+                <h4>Question 50:</h4>
+                <p>The ages of 6 friends are in a ratio 5 : 6 : 7 : 7 : 8 : 9. If the eldest of them is 8 years more than the mean of their ages, find the age of the 2nd youngest friend.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 50)">A) 20 years</li>
+                    <li onclick="checkAnswer(this, true, 50)">B) 24 years</li>
+                    <li onclick="checkAnswer(this, false, 50)">C) 35 years</li>
+                    <li onclick="checkAnswer(this, false, 50)">D) 28 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be in terms of x.<br>
+                    Their ages are 5x, 6x, 7x, 7x, 8x and 9x.<br>
+                    The mean of their age in terms of x:<br>
+                    (5x + 6x + 7x + 7x + 8x + 9x)/6 = 42x/6 = 7x<br>
+                    Mean of the ages = 7x<br>
+                    Age of the eldest person = 9x<br>
+                    Difference between the ages of the eldest person and the mean of their ages:<br>
+                    Difference = 9x – 7x = 8 years<br>
+                    2x = 8 years<br>
+                    X = 8/2 = 4 years<br>
+                    X = 4 years<br>
+                    Age of the 2nd youngest = 6x<br>
+                    6x = 6 * 4 = 24 years
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6 (Questions 51-55) -->
+        <div class="page" id="page6" data-page="6">
+            <!-- Question 51 -->
+            <div class="quiz" data-question="51">
+                <h4>Question 51:</h4>
+                <p>The median of age of 5 friends is 12 years. If their ages are in a ratio 6 : 5 : 8 : 3 : 4, find the age of the eldest friend.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 51)">A) 17 years</li>
+                    <li onclick="checkAnswer(this, false, 51)">B) 15.5 years</li>
+                    <li onclick="checkAnswer(this, false, 51)">C) 18 years</li>
+                    <li onclick="checkAnswer(this, true, 51)">D) 19.2 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let their ages be in terms of x.<br>
+                    Their ages are 6x, 5x, 8x, 3x and 4x.<br>
+                    To find the median of their ages in terms we must arrange their ages in ascending order.<br>
+                    3x < 4x < 5x < 6x < 8x<br>
+                    Median of the series = 5x = 12 years given<br>
+                    X = 12/5 = 2.4 years<br>
+                    Age of the eldest friend = 8x<br>
+                    8x = 8 * 2.4 = 19.2 years
+                </div>
+            </div>
+
+            <!-- Question 52 -->
+            <div class="quiz" data-question="52">
+                <h4>Question 52:</h4>
+                <p>The total age of a group of 9 students is 171 years. The average age of another group half of the average age of first group. If there are 6 people in group, find the average age of both the groups put together.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 52)">A) 15 years</li>
+                    <li onclick="checkAnswer(this, true, 52)">B) 15.2 years</li>
+                    <li onclick="checkAnswer(this, false, 52)">C) 15.4 years</li>
+                    <li onclick="checkAnswer(this, false, 52)">D) 15.5 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    The total age of group 1 = 171 years<br>
+                    The average age of first group:<br>
+                    171/9 = 19 years<br>
+                    The average age of the second group = half of the average age of the first group.<br>
+                    19/2 = 9.5 years<br>
+                    Total age of the second group:<br>
+                    9.5 * 6 = 57 years<br>
+                    Total age of the 2 groups = 57 + 171 = 228 years<br>
+                    Average age of both the groups = 228/15 = 15.2 years
+                </div>
+            </div>
+
+            <!-- Question 53 -->
+            <div class="quiz" data-question="53">
+                <h4>Question 53:</h4>
+                <p>There are 7 members in a clan. Out of them 3 shares an average age of 20 years. The average age of the rest 4 members is 18 years. Find the average age of the clan after a championship of 365 days.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 53)">A) 19.80 years</li>
+                    <li onclick="checkAnswer(this, false, 53)">B) 19.70 years</li>
+                    <li onclick="checkAnswer(this, true, 53)">C) 19.85 years</li>
+                    <li onclick="checkAnswer(this, false, 53)">D) 19.75 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Total age of the clan = age of the 1st group + age of the 2nd group<br>
+                    Total age of the first group = 3 * 20 years = 60 years<br>
+                    Total age of the second group = 4 * 18 years = 72 years<br>
+                    Total age of the clan = 60 + 72 = 132 years<br>
+                    Total age of the clan after 365 days = 132 + 7 * 1 = 132 + 7 = 139 years<br>
+                    Average age of the clan after a year = 139/7 = 19.85 years
+                </div>
+            </div>
+
+            <!-- Question 54 -->
+            <div class="quiz" data-question="54">
+                <h4>Question 54:</h4>
+                <p>A group has 4 friends named p, q, r and s. It is known that p = 2q, q = 2r and r = 2s. If the total of their ages is 105, find the total of the age of q.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, true, 54)">A) 28 years</li>
+                    <li onclick="checkAnswer(this, false, 54)">B) 29 years</li>
+                    <li onclick="checkAnswer(this, false, 54)">C) 30 years</li>
+                    <li onclick="checkAnswer(this, false, 54)">D) 32 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Let the age of every individual be in terms of a constant x.<br>
+                    Now, assuming s = x, r = 2s = 2x, q = 2r = 4x, p = 2q = 8x.<br>
+                    Total of their ages = x + 2x + 4x + 8x = 15x<br>
+                    Given total of their age = 105 years<br>
+                    15x = 105 years<br>
+                    X = 105/15 = 7 years<br>
+                    Age of q = 4x = 7 * 4 = 28 years
+                </div>
+            </div>
+
+            <!-- Question 55 -->
+            <div class="quiz" data-question="55">
+                <h4>Question 55:</h4>
+                <p>Out of 7 members of a family a, b, c, d, e, f and g, a and b share an average age 20, c and d share an average age 35 and e, f and g share an average age of 50 years. Find the average age of the family nearest to 2nd place of decimal.</p>
+                <ul class="options">
+                    <li onclick="checkAnswer(this, false, 55)">A) 36.14 years</li>
+                    <li onclick="checkAnswer(this, false, 55)">B) 36.16 years</li>
+                    <li onclick="checkAnswer(this, true, 55)">C) 37.14 years</li>
+                    <li onclick="checkAnswer(this, false, 55)">D) 37.15 years</li>
+                </ul>
+                <div class="explanation">
+                    <strong>Explanation:</strong><br><br>
+                    Total age of the family = sum of all the groups<br>
+                    Total age of group 1 = 20 * 2 = 40 years<br>
+                    Total age of group 2 = 35 * 2 = 70 years<br>
+                    Total age of the third group = 50 * 3 = 150 years<br>
+                    Total age of the entire family = 40 + 70 + 150 = 260 years<br>
+                    Average age of the entire family = 260/7 = 37.142 years ≈ 37.14 years
+                </div>
+            </div>
+        </div>
+
         </div>
 
         <!-- Pagination -->
@@ -1013,6 +1496,8 @@
                 <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
                 <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
                 <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
+                <li class="page-item"><a class="page-link" href="#" data-page="5">5</a></li>
+                <li class="page-item"><a class="page-link" href="#" data-page="6">6</a></li>
                 <li class="page-item">
                     <a class="page-link" href="#" data-page="next" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
