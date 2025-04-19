@@ -252,7 +252,7 @@
 }
 
 .container-fluid .navbar-brand {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans';
     font-size: 22px;
     text-align: center;
     width: 100%; /* Ensure full width */
@@ -276,7 +276,7 @@
 .footer-content {
     max-width: 1200px;
     margin: auto;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans';
     font-size: 19px;
 }
 
